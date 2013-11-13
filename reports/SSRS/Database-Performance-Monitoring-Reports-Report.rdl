@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
+  <Description>DB Monitoring</Description>
+  <DataSources><DataSource Name="DS1"><ConnectionProperties><DataProvider>SQL</DataProvider>
+  <ConnectString>Data Source=localhost;Initial Catalog=ReportingDB</ConnectString>
+  <IntegratedSecurity>true</IntegratedSecurity></ConnectionProperties></DataSource></DataSources>
+  <DataSets><DataSet Name="MainDataset"><Query><DataSourceName>DS1</DataSourceName>
+  <CommandText>SELECT * FROM vw_ReportData</CommandText></Query></DataSet></DataSets>
+  <Body><ReportItems><Textbox Name="Title"><Value>DB Monitoring</Value></Textbox></ReportItems></Body>
+</Report>
